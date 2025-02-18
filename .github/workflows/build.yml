@@ -29,7 +29,7 @@ jobs:
               env:
                 REPO: self
                 BRANCH: deploy
-                FOLDEDR: build
+                FOLDER: build
                 GITHUB_TOKEN: $ {{ sercrets.GITHUB_TOKEN }}
                 MESSAGE: "build ({sha}) {msg}"
 
