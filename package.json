@@ -1,0 +1,25 @@
+{
+  "name": "dls-calculator.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/dls-calculator/dls-calculator.github.io#readme",
+  "bugs": {
+    "url": "https://github.com/dls-calculator/dls-calculator.github.io/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dls-calculator/dls-calculator.github.io.git"
+  },
+  "license": "GPL-3.0-only",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./assets/src/source.css -o ./assets/styles.css --minify",
+    "dev": "npx tailwindcss -i ./assets/src/source.css -o ./assets/styles.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}
