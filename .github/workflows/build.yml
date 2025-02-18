@@ -1,0 +1,47 @@
+on:
+    push:
+        branches:
+            - main
+
+name: Deploy website
+jobs:
+    web-deploy:
+        name: Deploy
+        runs-on: ubuntu-latest
+        permissions:
+            contents: write
+        steps:
+            - name: Get the latest code
+              uses: actions/checkout@v4
+
+            - name: Use Node.js 22
+              uses: actions/setup-node@v2
+              with:
+                node-version: '22'
+
+            - name: Build project
+              run: |
+                  npm install
+                  npm run build
+
+            - name: Push files to branch
+              uses: s0/git-publish-subdir-action@deveop
+              env:
+                REPO: self
+                BRANCH: deploy
+                FOLDEDR: build
+                GITHUB_TOKEN: $ {{ sercrets.GITHUB_TOKEN }}
+                MESSAGE: "build ({sha}) {msg}"
+
+
+
+
+
+
+
+
+
+
+
+
+
