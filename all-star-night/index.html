@@ -7,43 +7,114 @@
     </head>
     <body>  
 
-        <div class="flex flex-col">
-            <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
-                <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
-                    <div class="overflow-hidden">
-                        <table class="min-w-full">
-                            <thead class="border-b">
-                                <tr>
-                                    <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">#</th>
-                                    <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">First</th>
-                                    <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">Last</th>
-                                    <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">Handle</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="border-b">
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">1</td>
-                                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Mark</td>
-                                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Otto</td>
-                                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">@mdo</td>
-                                </tr>
-                                <tr class="bg-white border-b">
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">2</td>
-                                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Jacob</td>
-                                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Thornton</td>
-                                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">@fat</td>
-                                </tr>
-                                <tr class="bg-white border-b">
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">3</td>
-                                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Larry</td>
-                                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Wild</td>
-                                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">@twitter</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
+        <div class="relative flex flex-col w-full h-full overflow-scroll text-gray-700 bg-white shadow-md rounded-lg bg-clip-border max-w-6xl">
+            <table id="productTable" class="w-full text-left table-auto min-w-max">
+                <thead>
+                <tr>
+                    <th class="p-4 border-b border-slate-300 bg-slate-50">
+                    <p class="block text-sm font-normal leading-none text-slate-500">
+                        Item
+                    </p>
+                    </th>
+                    <th class="p-4 border-b border-slate-300 bg-slate-50">
+                    <p class="block text-sm font-normal leading-none text-slate-500">
+                        Qty
+                    </p>
+                    </th>
+                    <th class="p-4 border-b border-slate-300 bg-slate-50">
+                    <p class="block text-sm font-normal leading-none text-slate-500">
+                        Total
+                    </p>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="hover:bg-slate-50">
+                    <td class="p-4 border-b border-slate-200">
+                    <p class="block text-sm text-slate-800">
+                        Wooden Chair
+                    </p>
+                    </td>
+                    <td class="p-4 border-b border-slate-200">
+                    <p class="block text-sm text-slate-800">
+                        <input
+                        class="w-24 bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow sm:w-min"
+                        placeholder="0"/>
+
+                    </p>
+                    </td>
+                    <td class="p-4 border-b border-slate-200">
+                    <p class="block text-sm text-slate-800">
+                        $170.00
+                    </p>
+                    </td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                    <td class="p-4 border-b border-slate-200">
+                    <p class="block text-sm text-slate-800">
+                        Table Lamp
+                    </p>
+                    </td>
+                    <td class="p-4 border-b border-slate-200">
+                    <p class="block text-sm text-slate-800">
+                        1
+                    </p>
+                    </td>
+                    <td class="p-4 border-b border-slate-200">
+                    <p class="block text-sm text-slate-800">
+                        $45.00
+                    </p>
+                    </td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                    <td class="p-4 border-b border-slate-200">
+                    <p class="block text-sm text-slate-800">
+                        Wall Art
+                    </p>
+                    </td>
+                    <td class="p-4 border-b border-slate-200">
+                    <p class="block text-sm text-slate-800">
+                        3
+                    </p>
+                    </td>
+                    <td class="p-4 border-b border-slate-200">
+                    <p class="block text-sm text-slate-800">
+                        $90.00
+                    </p>
+                    </td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                    <td class="p-4 border-b border-slate-200">
+                    <p class="block text-sm text-slate-800">
+                        Sofa
+                    </p>
+                    </td>
+                    <td class="p-4 border-b border-slate-200">
+                    <p class="block text-sm text-slate-800">
+                        1
+                    </p>
+                    </td>
+                    <td class="p-4 border-b border-slate-200">
+                    <p class="block text-sm text-slate-800">
+                        $300.00
+                    </p>
+                    </td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                    <td colspan="1" class="p-4 text-left font-bold text-slate-800 border-t border-slate-300">
+                    Total:
+                    </td>
+                    <td colspan="1" class="p-4 font-bold text-slate-800 border-t border-slate-300">
+                    7
+                    </td>
+                    <td colspan="1" class="p-4 font-semibold text-slate-800 border-t border-slate-300">
+                    $605.00
+                    </td>
+                </tr>
+                </tfoot>
+            </table>
         </div>
 
 
