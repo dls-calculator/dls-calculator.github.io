@@ -1,15 +1,33 @@
 <!doctype html>
-<html>
     <head>  
     <meta charset="UTF-8">  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <link href="../assets/styles.css" rel="stylesheet">
+    <script src="../assets/all-star-night-data.js"></script> 
     <script src="../assets/all-star-night-calculator.js"></script> 
     </head>
     <body>  
 
+
+
+        
+<!-- Accordion Item 1 -->
+<div class="border-b border-slate-200">
+    <button onclick="toggleAccordion(1)" class="w-full flex justify-between items-center py-5 text-slate-800">
+      <span>Phase 1</span>
+      <span id="icon-1" class="text-slate-800 transition-transform duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+          <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
+        </svg>
+      </span>
+    </button>
+    <div id="content-1" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+      <div class="pb-5 text-sm text-slate-500">
+
+        <!-- Phase 1 -->
         <div class="relative flex flex-col w-full h-full overflow-scroll text-gray-700 bg-white shadow-md rounded-lg bg-clip-border max-w-6xl">
             <table id="productTable" class="w-full text-left table-auto min-w-max">
+                <!-- Table Headers -->
                 <thead>
                 <tr>
                     <th class="p-4 border-b border-slate-300 bg-slate-50">
@@ -29,122 +47,15 @@
                     </th>
                     <th class="p-4 border-b border-slate-300 bg-slate-50">
                     <p class="block text-sm font-normal leading-none text-slate-500">
-                        Total
+                        Points
                     </p>
                     </th>
                 </tr>
                 </thead>
-                <tbody>
-                <tr class="hover:bg-slate-50">
-                    <td class="p-4 border-b border-slate-200">
-                    <p class="block text-sm text-slate-800">
-                        Advanced Search Maps
-                    </p>
-                    </td>
-                    <td class="px-4 py-2 border-b border-slate-200">
-                    <p class="block text-sm text-slate-800">
-                        <input
-                        class="w-24 bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow sm:w-min"
-                        type="text"
-                        onkeypress="handleAllowNumbersOnly(event)"
-                        onkeyup="addComma(this);"
-                        placeholder="0"/>
-                    </p>
-                    </td>
-                    <td class="p-4 border-b border-slate-200 hidden md:table-cell">
-                    <p class="block text-sm text-slate-800">
-                        120 each
-                    </p>
-                    </td>
-                    <td class="p-4 border-b border-slate-200">
-                    <p class="block text-sm text-slate-800">
-                       1,000,000,000
-                    </p>
-                    </td>
-                </tr>
-                <tr class="hover:bg-slate-50">
-                    <td class="p-4 border-b border-slate-200">
-                    <p class="block text-sm text-slate-800">
-                        Advanced Search Maps
-                    </p>
-                    </td>
-                    <td class="px-4 py-2 border-b border-slate-200">
-                    <p class="block text-sm text-slate-800">
-                        <input
-                        class="w-24 bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow sm:w-min"
-                        type="text"
-                        onkeypress="handleAllowNumbersOnly(event)"
-                        onkeyup="addComma(this);"
-                        onkeydown=""
-                        placeholder="0"/>
-                    </p>
-                    </td>
-                    <td class="p-4 border-b border-slate-200 hidden md:table-cell">
-                    <p class="block text-sm text-slate-800">
-                        120 each
-                    </p>
-                    </td>
-                    <td class="p-4 border-b border-slate-200">
-                    <p class="block text-sm text-slate-800">
-                        1,000,000,000
-                    </p>
-                    </td>
-                </tr>
-                <tr class="hover:bg-slate-50">
-                    <td class="p-4 border-b border-slate-200">
-                    <p class="block text-sm text-slate-800">
-                        Wall Art
-                    </p>
-                    </td>
-                    <td class="px-4 py-2 border-b border-slate-200">
-                    <p class="block text-sm text-slate-800">
-                        <input
-                        class="w-24 bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow sm:w-min"
-                        type="text"
-                        onkeypress="handleAllowNumbersOnly(event)"
-                        onkeyup="addComma(this);"
-                        placeholder="0"/>
-                    </p>
-                    </td>
-                    <td class="p-4 border-b border-slate-200 hidden md:table-cell">
-                    <p class="block text-sm text-slate-800">
-                        120 each
-                    </p>
-                    </td>
-                    <td class="p-4 border-b border-slate-200">
-                    <p class="block text-sm text-slate-800">
-                        1,000,000,000
-                    </p>
-                    </td>
-                </tr>
-                <tr class="hover:bg-slate-50">
-                    <td class="p-4 border-b border-slate-200">
-                    <p class="block text-sm text-slate-800">
-                        test text
-                    </p>
-                    </td>
-                    <td class="px-4 py-2 border-b border-slate-200">
-                    <p class="block text-sm text-slate-800">
-                        <input
-                        class="w-24 bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow sm:w-min"
-                        type="text"
-                        onkeypress="handleAllowNumbersOnly(event)"
-                        onkeyup="addComma(this);"
-                        placeholder="0"/>
-                    </p>
-                    </td>
-                    <td class="p-4 border-b border-slate-200 hidden md:table-cell">
-                    <p class="block text-sm text-slate-800">
-                        120 each
-                    </p>
-                    </td>
-                    <td class="p-4 border-b border-slate-200">
-                    <p class="block text-sm text-slate-800">
-                        1,000,000,000
-                    </p>
-                    </td>
-                </tr>
+                <!-- Table Body -->
+                <tbody id="phase-1-body">
                 </tbody>
+                <!-- Table Footer -->
                 <tfoot>
                 <tr>
                     <td colspan="2" class="p-4 text-left font-bold text-slate-800 border-t border-slate-300">
@@ -152,13 +63,118 @@
                     </td>
                     <td colspan="1" class="p-4 font-bold text-slate-800 border-t border-slate-300 hidden md:table-cell">
                     </td>
-                    <td colspan="1" class="p-4 font-semibold text-slate-800 border-t border-slate-300">
-                    1000000000
+                    <td id="phase-1-total" colspan="1" class="p-4 font-semibold text-slate-800 border-t border-slate-300">
+                    0
                     </td>
                 </tr>
                 </tfoot>
             </table>
         </div>
+    </div>
+   </div>
+  </div>
+
+
+
+
+   
+  <!-- Accordion Item 2 -->
+  <div class="border-b border-slate-200">
+    <button onclick="toggleAccordion(2)" class="w-full flex justify-between items-center py-5 text-slate-800">
+      <span>How to use Material Tailwind?</span>
+      <span id="icon-2" class="text-slate-800 transition-transform duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+          <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
+        </svg>
+      </span>
+    </button>
+    <div id="content-2" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+      <div class="pb-5 text-sm text-slate-500">
+        You can use Material Tailwind by importing its components into your Tailwind CSS project.
+      </div>
+    </div>
+  </div>
+   
+  <!-- Accordion Item 3 -->
+  <div class="border-b border-slate-200">
+    <button onclick="toggleAccordion(3)" class="w-full flex justify-between items-center py-5 text-slate-800">
+      <span>What can I do with Material Tailwind?</span>
+      <span id="icon-3" class="text-slate-800 transition-transform duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+          <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
+        </svg>
+      </span>
+    </button>
+    <div id="content-3" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+      <div class="pb-5 text-sm text-slate-500">
+        Material Tailwind allows you to quickly build modern, responsive websites with a focus on design.
+      </div>
+    </div>
+  </div>
+   
+
+
+
+
+
+  
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Row Template -->
+        <template id="template-row">
+            <tr class="hover:bg-slate-50">
+                <td class="p-4 border-b border-slate-200">
+                <p class="block text-sm text-slate-800">
+                    -
+                </p>
+                </td>
+                <td class="px-4 py-2 border-b border-slate-200">
+                <p class="block text-sm text-slate-800">
+                    <input
+                    class="w-24 bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow sm:w-min"
+                    type="text"
+                    onkeypress="handleAllowNumbersOnly(event);"
+                    onkeyup="addComma(this); "
+                    onchange="calculate(this);"
+                    placeholder="0"/>
+                </p>
+                </td>
+                <td class="p-4 border-b border-slate-200 hidden md:table-cell">
+                <p class="block text-sm text-slate-800">
+                    -
+                </p>
+                </td>
+                <td class="p-4 border-b border-slate-200">
+                <p class="block text-sm text-slate-800">
+                   0
+                </p>
+                </td>
+            </tr>
+        </template>
+
 
     </body>
 </html>
