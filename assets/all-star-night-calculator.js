@@ -1,4 +1,4 @@
-const phases = ["phase-1"];
+const phases = ["phase-1", "phase-2"];
 
 
 /* Allow only numbers in input */
@@ -21,7 +21,7 @@ const handleAllowNumbersOnly = (e) => {
 
 document.addEventListener("DOMContentLoaded", function(event) {
   for(let phase in phases){
-    let items = data[phases].items;
+    let items = data[phases[phase]].items;
     for(let item in items){
 
       const tbody = document.getElementById(phases[phase] + "-body");
@@ -59,8 +59,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     let phase = e.phase;
     let num = e.itemNumber;
     let currentItem = data[phase].items[num];
-    document.getElementById(phase + "-points-" + num).innerText = addCommas((currentItem.formula*quantity).toString());
-    currentItem.points = currentItem.formula*quantity;
+    document.getElementById(phase + "-points-" + num).innerText = addCommas(currentItem.formula(quantity).toString());
+    currentItem.points = currentItem.formula(quantity);
     // Update Phase total
     let total = 0;
     let items = data[phase].items;
