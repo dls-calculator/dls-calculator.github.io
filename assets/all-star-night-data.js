@@ -1,18 +1,15 @@
 
-// TODO redo this:
-//   "name": "Item Name", << Item Name
-//   "quantity": 0, << Item quantity, should always be set to 0
-//   "rate": "0 per -.", << Display text for rate
-//   "formula": [
-//    "", << Formula Type
-//    250 << Formula for rate (i.e Quantity Formula_Type Formula should = points)
-//      ] 
-//   "points": 0, << Item points, should always be set to 0
-//   "max": [
-//    "", << Max points from this item
-//    "" << Max points from this type of item (this is for stuff with more than one item)
-//    ] ^^ Use string for no max and number to set max
 
+// Format:
+// {
+//   "name": "Construction: 1 Minute", << Name
+//   "rate": "250/min.*", << Rate (display text)
+//   "formula": function(q){return data.cal(
+//            q*250,  << Formula. q is user input
+//            this)},
+//   "points": 0, << Points, should always be 0
+//   "max": "speedups-1", << Name of limit function if any (if no max = "none")
+// },
 
 const data = {
     "cal": (itemsTotal, obj) => { 
@@ -737,24 +734,7 @@ const data = {
           "points": 0,
           "max": "none",
         },
-
-
-
-
-
-        // {
-        //   "name": "test",
-        //   "rate": " Each",
-        //   "formula": function(q){return data.cal(q*, this)},
-        //   "points": 0,
-        //   "max": "none",
-        // },
-
-
       ]
     },
-
-
-
 
   };
