@@ -40,11 +40,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
       quantityElement.itemNumber = item;
 
       // Rate
-      let rateElement = clone.querySelectorAll("p")[2];
+      let rateElement = clone.querySelectorAll("p")[1];
       rateElement.textContent = items[item].rate;
 
       // Points
-      let pointsElement = clone.querySelectorAll("p")[3];
+      let pointsElement = clone.querySelectorAll("p")[2];
       pointsElement.id = phases[phase] + "-points-" + item;
 
       tbody.appendChild(clone);
@@ -71,8 +71,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     document.getElementById(phase + "-total").innerText = phaseTotal;
     document.getElementById(phase + "-final-total").innerText = phaseTotal;
 
-
-
     // Update Final total
     let finalTotal = 0;
     for(let i in phases){
@@ -80,9 +78,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
     console.log(finalTotal)
     document.getElementById("final-total").innerText = addCommas(finalTotal.toString());
-
   }
-
 
   // UI
   function toggleAccordion(index) {
