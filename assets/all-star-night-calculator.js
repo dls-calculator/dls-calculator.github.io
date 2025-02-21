@@ -54,13 +54,22 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 
   function calculate(e) {
-    // Get current item and set total to display and save it to data
+    // Get current item and set total to display 
     let quantity = e.value.replace(/,/gi, "");
     let phase = e.phase;
     let num = e.itemNumber;
     let currentItem = data[phase].items[num];
     document.getElementById(phase + "-points-" + num).innerText = addCommas(currentItem.formula(quantity).toString());
-    currentItem.points = currentItem.formula(quantity);
+    //currentItem.points = currentItem.formula(quantity);
+
+    // if (currentItem.max != "") {
+    //   console.log(currentItem.max())
+      
+    // }
+    
+
+
+
     // Update Phase total
     let total = 0;
     let items = data[phase].items;

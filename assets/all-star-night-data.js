@@ -16,337 +16,302 @@
 
 
 const data = {
+    "cal": (total, obj) => {
+      obj.points = total;
+      return total;
+    },
+
+
     "phase-1": {
       "phaseTotal": 0,
       "items": [
         {
           "name": "Construction: 1 Minute",
-          "quantity": 0,
           "rate": "250 per min.",
-          "formula": (q) => {return q*250},
+          "formula": function(q){return data.cal(q*250, this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Construction: 5 Minute",
-          "quantity": 0,
           "rate": "250 per min.",
-          "formula": (q) => {return q*(250*5)},
+          "formula": function(q){return data.cal(q*(250*5), this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Construction: 15 Minute",
-          "quantity": 0,
           "rate": "250 per min.",
-          "formula": (q) => {return q*(250*15)},
+          "formula": function(q){return data.cal(q*(250*15), this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Construction: 30 Minute",
-          "quantity": 0,
           "rate": "250 per min.",
-          "formula": (q) => {return q*(250*30)},
+          "formula": function(q){return data.cal(q*(250*30), this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Construction: 60 Minute",
-          "quantity": 0,
           "rate": "250 per min.",
-          "formula": (q) => {return q*(250*60)},
+          "formula": function(q){return data.cal(q*(250*60), this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Construction: 4 Hour",
-          "quantity": 0,
           "rate": "250 per min.",
-          "formula": (q) => {return q*(250*(4*60))},
+          "formula": function(q){return data.cal(q*(250*(4*60)), this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Construction: 8 Hour",
-          "quantity": 0,
           "rate": "250 per min.",
-          "formula": (q) => {return q*(250*(8*60))},
+          "formula": function(q){return data.cal(q*(250*(8*60)), this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Construction: 12 Hour",
-          "quantity": 0,
           "rate": "250 per min.",
-          "formula": (q) => {return q*(250*(12*60))},
+          "formula": function(q){return data.cal(q*(250*(12*60)), this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Construction: 15 Hour",
-          "quantity": 0,
           "rate": "250 per min.",
-          "formula": (q) => {return q*(250*(15*60))},
+          "formula": function(q){return data.cal(q*(250*(15*60)), this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Construction: 1 Day",
-          "quantity": 0,
           "rate": "250 per min.",
-          "formula": (q) => {return q*(250*(24*60))},
+          "formula": function(q){return data.cal(q*(250*(24*60)), this)},
           "points": 0,
           "max": ""
         },
   
         {
           "name": "Research: 1 Minute",
-          "quantity": 0,
           "rate": "250 per min.",
-          "formula": (q) => {return q*250},
+          "formula": function(q){return data.cal(q*250, this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Research: 5 Minute",
-          "quantity": 0,
           "rate": "250 per min.",
-          "formula": (q) => {return q*(250*5)},
+          "formula": function(q){return data.cal(q*(250*5), this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Research: 15 Minute",
-          "quantity": 0,
           "rate": "250 per min.",
-          "formula": (q) => {return q*(250*15)},
+          "formula": function(q){return data.cal(q*(250*15), this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Research: 30 Minute",
-          "quantity": 0,
           "rate": "250 per min.",
-          "formula": (q) => {return q*(250*30)},
+          "formula": function(q){return data.cal(q*(250*30), this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Research: 60 Minute",
-          "quantity": 0,
           "rate": "250 per min.",
-          "formula": (q) => {return q*(250*60)},
+          "formula": function(q){return data.cal(q*(250*60), this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Research: 4 Hour",
-          "quantity": 0,
           "rate": "250 per min.",
-          "formula": (q) => {return q*(250*(4*60))},
+          "formula": function(q){return data.cal(q*(250*(4*60)), this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Research: 8 Hour",
-          "quantity": 0,
           "rate": "250 per min.",
-          "formula": (q) => {return q*(250*(8*60))},
+          "formula": function(q){return data.cal(q*(250*(8*60)), this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Research: 12 Hour",
-          "quantity": 0,
           "rate": "250 per min.",
-          "formula": (q) => {return q*(250*(12*60))},
+          "formula": function(q){return data.cal(q*(250*(12*60)), this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Research: 15 Hour",
-          "quantity": 0,
           "rate": "250 per min.",
-          "formula": (q) => {return q*(250*(15*60))},
+          "formula": function(q){return data.cal(q*(250*(15*60)), this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Research: 1 Day",
-          "quantity": 0,
           "rate": "250 per min.",
-          "formula": (q) => {return q*(250*(24*60))},
+          "formula": function(q){return data.cal(q*(250*(24*60)), this)},
           "points": 0,
           "max": ""
         },
   
         {
           "name": "Training: 1 Minute",
-          "quantity": 0,
           "rate": "250 per min.",
-          "formula": (q) => {return q*250},
+          "formula": function(q){return data.cal(q*250, this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Training: 5 Minute",
-          "quantity": 0,
           "rate": "250 per min.",
-          "formula": (q) => {return q*(250*5)},
+          "formula": function(q){return data.cal(q*(250*5), this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Training: 15 Minute",
-          "quantity": 0,
           "rate": "250 per min.",
-          "formula": (q) => {return q*(250*15)},
+          "formula": function(q){return data.cal(q*(250*15), this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Training: 30 Minute",
-          "quantity": 0,
           "rate": "250 per min.",
-          "formula": (q) => {return q*(250*30)},
+          "formula": function(q){return data.cal(q*(250*30), this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Training: 60 Minute",
-          "quantity": 0,
           "rate": "250 per min.",
-          "formula": (q) => {return q*(250*60)},
+          "formula": function(q){return data.cal(q*(250*60), this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Training: 4 Hour",
-          "quantity": 0,
           "rate": "250 per min.",
-          "formula": (q) => {return q*(250*(4*60))},
+          "formula": function(q){return data.cal(q*(250*(4*60)), this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Training: 8 Hour",
-          "quantity": 0,
           "rate": "250 per min.",
-          "formula": (q) => {return q*(250*(8*60))},
+          "formula": function(q){return data.cal(q*(250*(8*60)), this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Training: 12 Hour",
-          "quantity": 0,
           "rate": "250 per min.",
-          "formula": (q) => {return q*(250*(12*60))},
+          "formula": function(q){return data.cal(q*(250*(12*60)), this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Training: 15 Hour",
-          "quantity": 0,
           "rate": "250 per min.",
-          "formula": (q) => {return q*(250*(15*60))},
+          "formula": function(q){return data.cal(q*(250*(15*60)), this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Training: 1 Day",
-          "quantity": 0,
           "rate": "250 per min.",
-          "formula": (q) => {return q*(250*(24*60))},
+          "formula": function(q){return data.cal(q*(250*(24*60)), this)},
           "points": 0,
           "max": ""
         },
   
         {
           "name": "Universal: 1 Minute",
-          "quantity": 0,
           "rate": "250 per min.",
-          "formula": (q) => {return q*250},
+          "formula": function(q){return data.cal(q*250, this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Universal: 5 Minute",
-          "quantity": 0,
           "rate": "250 per min.",
-          "formula": (q) => {return q*(250*5)},
+          "formula": function(q){return data.cal(q*(250*5), this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Universal: 15 Minute",
-          "quantity": 0,
           "rate": "250 per min.",
-          "formula": (q) => {return q*(250*15)},
+          "formula": function(q){return data.cal(q*(250*15), this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Universal: 30 Minute",
-          "quantity": 0,
           "rate": "250 per min.",
-          "formula": (q) => {return q*(250*30)},
+          "formula": function(q){return data.cal(q*(250*30), this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Universal: 60 Minute",
-          "quantity": 0,
           "rate": "250 per min.",
-          "formula": (q) => {return q*(250*60)},
+          "formula": function(q){return data.cal(q*(250*60), this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Universal: 4 Hour",
-          "quantity": 0,
           "rate": "250 per min.",
-          "formula": (q) => {return q*(250*(4*60))},
+          "formula": function(q){return data.cal(q*(250*(4*60)), this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Universal: 8 Hour",
-          "quantity": 0,
           "rate": "250 per min.",
-          "formula": (q) => {return q*(250*(8*60))},
+          "formula": function(q){return data.cal(q*(250*(8*60)), this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Universal: 12 Hour",
-          "quantity": 0,
           "rate": "250 per min.",
-          "formula": (q) => {return q*(250*(12*60))},
+          "formula": function(q){return data.cal(q*(250*(12*60)), this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Universal: 15 Hour",
-          "quantity": 0,
           "rate": "250 per min.",
-          "formula": (q) => {return q*(250*(15*60))},
+          "formula": function(q){return data.cal(q*(250*(15*60)), this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Universal: 1 Day",
-          "quantity": 0,
           "rate": "250 per min.",
-          "formula": (q) => {return q*(250*(24*60))},
+          "formula": function(q){return data.cal(q*(250*(24*60)), this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Exquisite File",
-          "quantity": 0,
           "rate": "10,800 each",
-          "formula": (q) => {return q*10800},
+          "formula": function(q){return data.cal(q*10800, this)},
           "points": 0,
           "max": ""
           },
@@ -358,154 +323,162 @@ const data = {
       "items": [
         {
           "name": "Normal Map",
-          "quantity": 0,
           "rate": "1000 Each",
-          "formula": (q) => {return q*1000},
+          "formula": function(q){return data.cal(q*1000, this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Advanced Map",
-          "quantity": 0,
           "rate": "8000 Each",
-          "formula": (q) => {return q*8000}, 
+          "formula": function(q){return data.cal(q*8000, this)}, 
           "points": 0,
           "max": ""
         },
         {
           "name": "100 XP",
-          "quantity": 0,
           "rate": "1 per 50xp",
-          "formula": (q) => {return (q*100)/50},
+          "formula": function(q){return data.cal((q*100)/50, this)},
+          "points": 0,
+          "max": ""
+        },
+        {
+          "name": "500 XP",
+          "rate": "1 per 50xp",
+          "formula": function(q){return data.cal((q*500)/50, this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "1,000 XP",
-          "quantity": 0,
           "rate": "1 per 50xp",
-          "formula": (q) => {return (q*1000)/50},
+          "formula": function(q){return data.cal((q*1000)/50, this)},
           "points": 0,
           "max": ""
         },
-
-
-
-
-
-
-
-
-
+        {
+          "name": "5,000 XP",
+          "rate": "1 per 50xp",
+          "formula": function(q){return data.cal((q*5000)/50, this)},
+          "points": 0,
+          "max": ""
+        },
+        {
+          "name": "10,000 XP",
+          "rate": "1 per 50xp",
+          "formula": function(q){return data.cal((q*10000)/50, this)},
+          "points": 0,
+          "max": ""
+        },
+        {
+          "name": "20,000 XP",
+          "rate": "1 per 50xp",
+          "formula": function(q){return data.cal((q*20000)/50, this)},
+          "points": 0,
+          "max": ""
+        },
+        {
+          "name": "50,000 XP",
+          "rate": "1 per 50xp",
+          "formula": function(q){return data.cal((q*50000)/50, this)},
+          "points": 0,
+          "max": ""
+        },
         {
           "name": "Badges: Gold L",
-          "quantity": 0,
           "rate": " 20,000 Each",
-          "formula": (q) => {return q*20000},
+          "formula": function(q){return data.cal(q*20000, this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Badges: Gold M",
-          "quantity": 0,
           "rate": "8,000 Each",
-          "formula": (q) => {return q*8000},
+          "formula": function(q){return data.cal(q*8000, this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Badges: Gold S",
-          "quantity": 0,
           "rate": "2,000 Each",
-          "formula": (q) => {return q*2000},
+          "formula": function(q){return data.cal(q*2000, this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Badges: Purple L",
-          "quantity": 0,
           "rate": "3,000 Each",
-          "formula": (q) => {return q*3000},
+          "formula": function(q){return data.cal(q*3000, this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Badges: Purple M",
-          "quantity": 0,
           "rate": "1,200 Each",
-          "formula": (q) => {return q*1200},
+          "formula": function(q){return data.cal(q*1200, this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Badges: Purple S",
-          "quantity": 0,
           "rate": "300 Each",
-          "formula": (q) => {return q*300},
+          "formula": function(q){return data.cal(q*300, this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Badges: Blue L",
-          "quantity": 0,
           "rate": "500 Each",
-          "formula": (q) => {return q*500},
+          "formula": function(q){return data.cal(q*500, this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Badges: Blue M",
-          "quantity": 0,
           "rate": "200 Each",
-          "formula": (q) => {return q*200},
+          "formula": function(q){return data.cal(q*200, this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Badges: Blue S",
-          "quantity": 0,
           "rate": "40 Each",
-          "formula": (q) => {return q*40},
+          "formula": function(q){return data.cal(q*40, this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Fragments: Gold",
-          "quantity": 0,
           "rate": "10,000 Each",
-          "formula": (q) => {return q*10000},
+          "formula": function(q){return data.cal(q*10000, this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Fragments: Purple",
-          "quantity": 0,
           "rate": "2,000 Each",
-          "formula": (q) => {return q*2000},
+          "formula": function(q){return data.cal(q*2000, this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Fragments: Blue",
-          "quantity": 0,
           "rate": "600 Each",
-          "formula": (q) => {return q*600},
+          "formula": function(q){return data.cal(q*600, this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Energy Cores",
-          "quantity": 0,
           "rate": "15,000 Each",
-          "formula": (q) => {return q*15000},
+          "formula": function(q){return data.cal(q*15000, this)},
           "points": 0,
           "max": ""
         },
         {
           "name": "Exquisite Files",
-          "quantity": 0,
           "rate": "10,800 Each",
-          "formula": (q) => {return q*10800},
+          "formula": function(q){return data.cal(q*10800, this)},
           "points": 0,
           "max": ""
         },
@@ -516,14 +489,13 @@ const data = {
 
 
 
-        {
-          "name": "",
-          "quantity": 0,
-          "rate": " Each",
-          "formula": [ "", ],
-          "points": 0,
-          "max": ""
-        },
+        // {
+        //   "name": "test",
+        //   "rate": " Each",
+        //   "formula": function(q){return data.cal(q, this)},
+        //   "points": 0,
+        //   "max": function(){  return data.test},
+        // },
 
 
       ]
