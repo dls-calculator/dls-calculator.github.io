@@ -1,24 +1,24 @@
-const phases = ["phase-1", "phase-2"];
+const phases = ["phase-1", "phase-2", "phase-3", "phase-4", "phase-5"];
 
-
-/* Allow only numbers in input */
+// Allow only numbers in input 
 const handleAllowNumbersOnly = (e) => {
     if (e.target.type === "text" && !e.key.match(/^[0-9]+$/)) {
       e.preventDefault();
     }
   };
 
-  /* Add commas as the user types the number (and calculate after) */
+  // Add commas as the user types the number (and calculate after) 
   function addComma(txt) {
     txt.value = addCommas(txt.value.replace(/,/gi, ""));
     calculate(txt);
  }  
 
+ // Add commas to number (type must be string though)
   function addCommas(number) {
     return number.split(/(?=(?:\d{3})+$)/).join(",")
   }
 
-
+// On load make all the rows
 document.addEventListener("DOMContentLoaded", function(event) {
   for(let phase in phases){
     let items = data[phases[phase]].items;
@@ -52,43 +52,36 @@ document.addEventListener("DOMContentLoaded", function(event) {
   }
 });
 
-
   function calculate(e) {
     // Get current item and set total to display 
     let quantity = e.value.replace(/,/gi, "");
     let phase = e.phase;
     let num = e.itemNumber;
     let currentItem = data[phase].items[num];
-    currentItem.formula(quantity).then((result)=>{
-      document.getElementById(phase + "-points-" + num).innerText = addCommas(result.toString());
-
+    
+    document.getElementById(phase + "-points-" + num).innerText = addCommas(currentItem.formula(quantity).toString());
     // Update Phase total
     let total = 0;
     let items = data[phase].items;
     for(let item in items){
-      total = total + items[item].points;
+        total = Number(total) + Number(items[item].points);
     }
-    document.getElementById(phase + "-total").innerText = addCommas(total.toString());
+    let phaseTotal = addCommas(total.toString());
     data[phase].phaseTotal = total;
-    
-    });
-  
+    document.getElementById(phase + "-total").innerText = phaseTotal;
+    document.getElementById(phase + "-final-total").innerText = phaseTotal;
 
 
 
-    //currentItem.points = currentItem.formula(quantity);
-
-    // if (currentItem.max != "") {
-    //   console.log(currentItem.max())
-      
-    // }
-  
-
+    // Update Final total
+    let finalTotal = 0;
+    for(let i in phases){
+      finalTotal = Number(finalTotal) + Number(data[phases[i]].phaseTotal);
+    }
+    console.log(finalTotal)
+    document.getElementById("final-total").innerText = addCommas(finalTotal.toString());
 
   }
-
-
-
 
 
   // UI
@@ -119,3 +112,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       icon.innerHTML = minusSVG;
     }
   }
+
+
+
+  
