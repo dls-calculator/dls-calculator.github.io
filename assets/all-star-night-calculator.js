@@ -59,16 +59,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     let phase = e.phase;
     let num = e.itemNumber;
     let currentItem = data[phase].items[num];
-    document.getElementById(phase + "-points-" + num).innerText = addCommas(currentItem.formula(quantity).toString());
-    //currentItem.points = currentItem.formula(quantity);
-
-    // if (currentItem.max != "") {
-    //   console.log(currentItem.max())
-      
-    // }
-    
-
-
+    currentItem.formula(quantity).then((result)=>{
+      document.getElementById(phase + "-points-" + num).innerText = addCommas(result.toString());
 
     // Update Phase total
     let total = 0;
@@ -78,6 +70,21 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
     document.getElementById(phase + "-total").innerText = addCommas(total.toString());
     data[phase].phaseTotal = total;
+    
+    });
+  
+
+
+
+    //currentItem.points = currentItem.formula(quantity);
+
+    // if (currentItem.max != "") {
+    //   console.log(currentItem.max())
+      
+    // }
+  
+
+
   }
 
 
