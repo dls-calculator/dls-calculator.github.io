@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       let quantityElement = clone.querySelectorAll("input")[0];
       quantityElement.phase = phases[phase];
       quantityElement.itemNumber = item;
+      quantityElement.id = "input-" + item;
 
       // Rate
       let rateElement = clone.querySelectorAll("p")[1];
@@ -59,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     let num = e.itemNumber;
     let currentItem = data[phase].items[num];
     
-    document.getElementById(phase + "-points-" + num).innerText = addCommas(currentItem.formula(quantity).toString());
+    document.getElementById(phase + "-points-" + num).innerText = addCommas(currentItem.formula(quantity, e.id, atMaxCalledBack).toString());
     // Update Phase total
     let total = 0;
     let items = data[phase].items;
@@ -78,6 +79,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
     console.log(finalTotal)
     document.getElementById("final-total").innerText = addCommas(finalTotal.toString());
+  }
+
+  // Callback when max is reached
+  function atMaxCalledBack(id, isAtMax) {
+    let input = document.getElementById(id);
+    if(isAtMax){
+      input.style.color = "#DC2626";
+    } else {
+      input.style.color = "#004155";
+    }
   }
 
   // UI
