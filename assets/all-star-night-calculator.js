@@ -2,15 +2,23 @@ const phases = ["phase-1", "phase-2", "phase-3", "phase-4", "phase-5"];
 
 // Allow only numbers in input 
 const handleAllowNumbersOnly = (e) => {
+  if (e.target.multipleinput == false) { // If this is not a multiple input allow only number
     if (e.target.type === "text" && !e.key.match(/^[0-9]+$/)) {
       e.preventDefault();
     }
+  } else { // If it is allow Numbers and +
+    if (e.target.type === "text" && !e.key.match(/^[0-9&+]+$/)) {
+      e.preventDefault();
+    }
+  }
   };
 
   // Add commas as the user types the number (and calculate after) 
-  function addComma(txt) {
-    txt.value = addCommas(txt.value.replace(/,/gi, ""));
-    calculate(txt);
+  function addComma(e) {
+    if (e.multipleinput == false) { // Don't add commas to fields that accept multiple inputs
+      e.value = addCommas(e.value.replace(/,/gi, ""));
+    }
+    calculate(e);
  }  
 
  // Add commas to number (type must be string though)
@@ -38,6 +46,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       let quantityElement = clone.querySelectorAll("input")[0];
       quantityElement.phase = phases[phase];
       quantityElement.itemNumber = item;
+      quantityElement.multipleinput = (items[item].special == "multiple-input")? true : false;
       quantityElement.id = "input-" + item;
 
       // Rate
@@ -60,7 +69,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
     let num = e.itemNumber;
     let currentItem = data[phase].items[num];
     
-    document.getElementById(phase + "-points-" + num).innerText = addCommas(currentItem.formula(quantity, e.id, atMaxCalledBack).toString());
+    // Update Item total
+    if (e.multipleinput == true) { // Add input first if this is a multiple input field
+      let inputs = quantity.split("+");
+      let itemTotal = 0;
+      for (let i in inputs) {
+        itemTotal = itemTotal + inputs[i];
+      }
+      document.getElementById(phase + "-points-" + num).innerText = addCommas(currentItem.formula(itemTotal, e.id).toString());
+    } else {
+      document.getElementById(phase + "-points-" + num).innerText = addCommas(currentItem.formula(quantity, e.id).toString());
+    }
     // Update Phase total
     let total = 0;
     let items = data[phase].items;
@@ -79,16 +98,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
     console.log(finalTotal)
     document.getElementById("final-total").innerText = addCommas(finalTotal.toString());
-  }
-
-  // Callback when max is reached
-  function atMaxCalledBack(id, isAtMax) {
-    let input = document.getElementById(id);
-    if(isAtMax){
-      input.style.color = "#DC2626";
-    } else {
-      input.style.color = "#004155";
-    }
   }
 
   // UI
@@ -119,6 +128,46 @@ document.addEventListener("DOMContentLoaded", function(event) {
       icon.innerHTML = minusSVG;
     }
   }
+
+// Other
+
+  // Callback when max is reached fo an item
+  function itemLimitReached(id, limitReached) {
+    let input = document.getElementById(id);
+    if(limitReached){
+      input.style.color = "#DC2626";
+    } else {
+      input.style.color = "#004155";
+    }
+  }
+
+  // Handles any special functions
+  function cal(itemsTotal, obj, id){ 
+    let isMax = data.limits[obj.special](itemsTotal, obj.points);
+    if (isMax) { // Check if this exceeds the limit if any
+      // If it exceeds the limit don't update and change text red
+      itemLimitReached(id, true);
+      return obj.points;
+    } else {
+      // If it doesn't exceed the limit update (and clear red text if any)
+      itemLimitReached(id, false);
+      obj.points = itemsTotal;
+      return itemsTotal;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
