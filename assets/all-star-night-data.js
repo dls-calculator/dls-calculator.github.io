@@ -7,7 +7,7 @@
 //            q*250,  << Formula. q is user input
 //            this, id)},
 //   "points": 0, << Points, should always be 0
-//   "special": "speedups-1", << Name of the special function if any to be called (i.e any limits or other functions)
+//   "special": "speedups-1", << Name of the special function if any to be called (i.e any limits or other functions/indicators)
 // },
 
 const data = {
@@ -500,45 +500,45 @@ const data = {
       "items": [
         {
           "name": "Troops T1",
-          "rate": "5 Each",
+          "rate": "5 Each**",
           "formula": function(q, id){return cal(q*5, this, id)},
           "points": 0,
-          "special": "none"
+          "special": "multiple-input"
         },
         {
           "name": "Troops T2",
-          "rate": "10 Each",
+          "rate": "10 Each**",
           "formula": function(q, id){return cal(q*10, this, id)},
           "points": 0,
-          "special": "none"
+          "special": "multiple-input"
         },
         {
           "name": "Troops T3",
-          "rate": "20 Each",
+          "rate": "20 Each**",
           "formula": function(q, id){return cal(q*20, this, id)},
           "points": 0,
-          "special": "none"
+          "special": "multiple-input"
         },
         {
           "name": "Troops T4",
-          "rate": "40 Each",
+          "rate": "40 Each**",
           "formula": function(q, id){return cal(q*40, this, id)},
           "points": 0,
-          "special": "none"
+          "special": "multiple-input"
         },
         {
           "name": "Troops T5",
-          "rate": "80 Each",
+          "rate": "80 Each**",
           "formula": function(q, id){return cal(q*80, this, id)},
           "points": 0,
-          "special": "none"
+          "special": "multiple-input"
         },
         {
-          "name": "Troops T5",
-          "rate": "150 Each",
+          "name": "Troops T6",
+          "rate": "150 Each**",
           "formula": function(q, id){return cal(q*150, this, id)},
           "points": 0,
-          "special": "none"
+          "special": "multiple-input"
         },
         {
           "name": "Exquisite Files",
@@ -659,45 +659,45 @@ const data = {
         },
         {
           "name": "Parts: Basic",
-          "rate": "750 Each",
+          "rate": "750 Each**",
           "formula": function(q, id){return cal(q*750, this, id)},
           "points": 0,
-          "special": "none",
+          "special": "multiple-input",
         },
         {
           "name": "Parts: General",
-          "rate": "2,350 Each",
+          "rate": "2,350 Each**",
           "formula": function(q, id){return cal(q*2350, this, id)},
           "points": 0,
-          "special": "none",
+          "special": "multiple-input",
         },
         {
-          "name": "Parts: Premium",
+          "name": "Parts: Premium**",
           "rate": "6,750 Each",
           "formula": function(q, id){return cal(q*6750, this, id)},
           "points": 0,
-          "special": "none",
+          "special": "multiple-input",
         },
         {
           "name": "Parts: Elite",
-          "rate": "20,250 Each",
+          "rate": "20,250 Each**",
           "formula": function(q, id){return cal(q*20250, this, id)},
           "points": 0,
-          "special": "none",
+          "special": "multiple-input",
         },
         {
           "name": "Parts: Legendary",
-          "rate": "60,750 Each",
+          "rate": "60,750 Each**",
           "formula": function(q, id){return cal(q*60750, this, id)},
           "points": 0,
-          "special": "none",
+          "special": "multiple-input",
         },
         {
           "name": "Parts: Supreme",
-          "rate": "182,250 Each",
+          "rate": "182,250 Each**",
           "formula": function(q, id){return cal(q*182250, this, id)},
           "points": 0,
-          "special": "none",
+          "special": "multiple-input",
         },
         {
           "name": "Tickets",
