@@ -6,48 +6,63 @@
     <link href="../assets/styles.css" rel="stylesheet">
     <script src="../assets/all-star-night-data.js"></script> 
     <script src="../assets/all-star-night-calculator.js"></script> 
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anta&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     </head>
     <body>  
-      <div class="mt-10 flex w-full px-1 md:px-10 xl:px-16">
+      <nav class="bg-raincloud fixed top-0 left-0 right-0 z-50 w-full px-4 h-14">
+        <div class="flex flex-row justify-between">
+            <a class="mt-4 ms-10" href="https://dls-calculator.github.io/">
+              <svg class="fill-peaches h-6 group-hover:fill-black/80 duration-300 ease-in-out" viewBox="0 0 32 32"><g data-name="calculator 2"><path d="M16 4.16A2.16 2.16 0 0 0 13.84 2H4.16A2.16 2.16 0 0 0 2 4.16V6a1 1 0 0 0 2 0V4.16A.16.16 0 0 1 4.16 4h9.68a.16.16 0 0 1 .16.16v9.68a.16.16 0 0 1-.16.16H4.16a.16.16 0 0 1-.16-.16V10a1 1 0 0 0-2 0v3.84A2.16 2.16 0 0 0 4.16 16h9.68A2.16 2.16 0 0 0 16 13.84zM27.84 2H26a1 1 0 0 0 0 2h1.84a.16.16 0 0 1 .16.16v7.68a.16.16 0 0 1-.16.16h-7.68a.16.16 0 0 1-.16-.16V4.16a.16.16 0 0 1 .16-.16H22a1 1 0 0 0 0-2h-1.84A2.16 2.16 0 0 0 18 4.16v7.68A2.16 2.16 0 0 0 20.16 14h7.68A2.16 2.16 0 0 0 30 11.84V4.16A2.16 2.16 0 0 0 27.84 2zM11.84 18H4.16A2.16 2.16 0 0 0 2 20.16v7.68A2.16 2.16 0 0 0 4.16 30h7.68A2.16 2.16 0 0 0 14 27.84V25a1 1 0 0 0-2 0v2.84a.16.16 0 0 1-.16.16H4.16a.16.16 0 0 1-.16-.16v-7.68a.16.16 0 0 1 .16-.16h7.68a.16.16 0 0 1 .16.16V21a1 1 0 0 0 2 0v-.84A2.16 2.16 0 0 0 11.84 18zM27.84 16h-9.68A2.16 2.16 0 0 0 16 18.16v9.68A2.16 2.16 0 0 0 18.16 30H22a1 1 0 0 0 0-2h-3.84a.16.16 0 0 1-.16-.16v-9.68a.16.16 0 0 1 .16-.16h9.68a.16.16 0 0 1 .16.16v9.68a.16.16 0 0 1-.16.16H26a1 1 0 0 0 0 2h1.84A2.16 2.16 0 0 0 30 27.84v-9.68A2.16 2.16 0 0 0 27.84 16z"/><path d="M9 5.6a1 1 0 0 0-1 1V8H6.6a1 1 0 0 0 0 2H8v1.4a1 1 0 0 0 2 0V10h1.4a1 1 0 0 0 0-2H10V6.6a1 1 0 0 0-1-1zM10.12 21.88a1 1 0 0 0-1.41 0l-.71.71-.71-.71a1 1 0 0 0-1.41 1.41l.71.71-.71.71a1 1 0 0 0 0 1.41 1 1 0 0 0 1.41 0l.71-.71.71.71a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41L9.41 24l.71-.71a1 1 0 0 0 0-1.41zM21 8a1 1 0 0 0 1 1h4a1 1 0 0 0 0-2h-4a1 1 0 0 0-1 1zM20 22h6a1 1 0 0 0 0-2h-6a1 1 0 0 0 0 2zM20 26h6a1 1 0 0 0 0-2h-6a1 1 0 0 0 0 2z"/></g></svg>             
+             </a>
+                <a class="mt-4 me-10" href="https://github.com/dls-calculator/dls-calculator.github.io">
+                <svg class="fill-peaches h-6 group-hover:fill-black/80 duration-300 ease-in-out" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            </a>
+        </div>
+    </nav>
+
+
+      <div class="mt-16 flex w-full px-1 md:px-10 md:mt-24 xl:px-16">
         <div class="flex grow flex-col">
           
 <!-- Accordion Item 1 -->
 <div class="border-b border-slate-200 mx-auto container">
     <button onclick="toggleAccordion(1)" class="w-full flex justify-between items-center py-5 text-slate-800">
-      <span class="text-slate-600 font-medium">Phase 1</span>
-      <span id="icon-1" class="text-slate-800 transition-transform duration-300">
+      <span class="text-header font-[Anta]">Phase 1</span>
+      <span id="icon-1" class="text-header transition-transform duration-300">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
           <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
         </svg>
       </span>
     </button>
     <div id="content-1" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-      <div class="pb-5 text-sm text-slate-500">
+      <div class="pb-5 text-sm text-body">
 
         <!-- Phase 1 -->
-        <div class="relative flex flex-col w-full h-full overflow-scroll text-gray-700 bg-white shadow-md rounded-lg bg-clip-border ">
+        <div class="relative flex flex-col w-full h-full overflow-scroll text-body bg-white shadow-md rounded-lg bg-clip-border font-[Inter]">
             <table id="productTable" class="w-full text-left table-auto min-w-max">
                 <!-- Table Headers -->
                 <thead>
                 <tr>
                     <th class="p-4 border-b border-slate-300 bg-slate-50">
-                    <p class="block text-sm font-normal leading-none text-slate-500">
+                    <p class="block text-sm font-normal leading-none text-body">
                         Item
                     </p>
                     </th>
                     <th class="p-4 border-b border-slate-300 bg-slate-50">
-                    <p class="block text-sm font-normal leading-none text-slate-500">
+                    <p class="block text-sm font-normal leading-none text-body">
                         Quantity
                     </p>
                     </th>
                     <th class="p-4 border-b border-slate-300 bg-slate-50 hidden md:table-cell">
-                    <p class="block text-sm font-normal leading-none text-slate-500">
+                    <p class="block text-sm font-normal leading-none text-body">
                         Rate
                     </p>
                     </th>
                     <th class="p-4 border-b border-slate-300 bg-slate-50">
-                    <p class="block text-sm font-normal leading-none text-slate-500">
+                    <p class="block text-sm font-normal leading-none text-body">
                         Points
                     </p>
                     </th>
@@ -59,12 +74,12 @@
                 <!-- Table Footer -->
                 <tfoot>
                 <tr>
-                    <td colspan="2" class="p-4 text-left font-bold text-slate-800 border-t border-slate-300">
+                    <td colspan="2" class="p-4 text-left font-bold text-header border-t border-slate-300">
                     Phase Total:
                     </td>
                     <td colspan="1" class="p-4 font-bold text-slate-800 border-t border-slate-300 hidden md:table-cell">
                     </td>
-                    <td id="phase-1-total" colspan="1" class="p-4 font-semibold text-slate-800 border-t border-slate-300">
+                    <td id="phase-1-total" colspan="1" class="p-4 font-semibold text-header border-t border-slate-300">
                     0
                     </td>
                 </tr>
@@ -78,38 +93,38 @@
   <!-- Accordion Item 2 -->
   <div class="border-b border-slate-200 mx-auto container">
     <button onclick="toggleAccordion(2)" class="w-full flex justify-between items-center py-5 text-slate-800">
-      <span class="text-slate-600 font-medium">Phase 2</span>
-      <span id="icon-2" class="text-slate-800 transition-transform duration-300">
+      <span class="text-header font-[Anta]">Phase 2</span>
+      <span id="icon-2" class="text-header transition-transform duration-300">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
           <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
         </svg>
       </span>
     </button>
     <div id="content-2" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-      <div class="pb-5 text-sm text-slate-500">
+      <div class="pb-5 text-sm text-body">
         <!-- Phase 2 -->
-        <div class="relative flex flex-col w-full h-full overflow-scroll text-gray-700 bg-white shadow-md rounded-lg bg-clip-border ">
+        <div class="relative flex flex-col w-full h-full overflow-scroll text-body bg-white shadow-md rounded-lg bg-clip-border font-[Inter]">
           <table id="productTable" class="w-full text-left table-auto min-w-max">
               <!-- Table Headers -->
               <thead>
               <tr>
                   <th class="p-4 border-b border-slate-300 bg-slate-50">
-                  <p class="block text-sm font-normal leading-none text-slate-500">
+                  <p class="block text-sm font-normal leading-none text-body">
                       Item
                   </p>
                   </th>
                   <th class="p-4 border-b border-slate-300 bg-slate-50">
-                  <p class="block text-sm font-normal leading-none text-slate-500">
+                  <p class="block text-sm font-normal leading-none text-body">
                       Quantity
                   </p>
                   </th>
                   <th class="p-4 border-b border-slate-300 bg-slate-50 hidden md:table-cell">
-                  <p class="block text-sm font-normal leading-none text-slate-500">
+                  <p class="block text-sm font-normal leading-none text-body">
                       Rate
                   </p>
                   </th>
                   <th class="p-4 border-b border-slate-300 bg-slate-50">
-                  <p class="block text-sm font-normal leading-none text-slate-500">
+                  <p class="block text-sm font-normal leading-none text-body">
                       Points
                   </p>
                   </th>
@@ -121,12 +136,12 @@
               <!-- Table Footer -->
               <tfoot>
               <tr>
-                  <td colspan="2" class="p-4 text-left font-bold text-slate-800 border-t border-slate-300">
+                  <td colspan="2" class="p-4 text-left font-bold text-header border-t border-slate-300">
                   Phase Total:
                   </td>
                   <td colspan="1" class="p-4 font-bold text-slate-800 border-t border-slate-300 hidden md:table-cell">
                   </td>
-                  <td id="phase-2-total" colspan="1" class="p-4 font-semibold text-slate-800 border-t border-slate-300">
+                  <td id="phase-2-total" colspan="1" class="p-4 font-semibold text-header border-t border-slate-300">
                   0
                   </td>
               </tr>
@@ -140,38 +155,38 @@
   <!-- Accordion Item 3 -->
   <div class="border-b border-slate-200 mx-auto container">
     <button onclick="toggleAccordion(3)" class="w-full flex justify-between items-center py-5 text-slate-800">
-      <span class="text-slate-600 font-medium">Phase 3</span>
-      <span id="icon-3" class="text-slate-800 transition-transform duration-300">
+      <span class="text-header font-[Anta]">Phase 3</span>
+      <span id="icon-3" class="text-header transition-transform duration-300">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
           <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
         </svg>
       </span>
     </button>
     <div id="content-3" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-      <div class="pb-5 text-sm text-slate-500">
+      <div class="pb-5 text-sm text-body">
         <!-- Phase 3 -->
-        <div class="relative flex flex-col w-full h-full overflow-scroll text-gray-700 bg-white shadow-md rounded-lg bg-clip-border ">
+        <div class="relative flex flex-col w-full h-full overflow-scroll text-body bg-white shadow-md rounded-lg bg-clip-border font-[Inter]">
           <table id="productTable" class="w-full text-left table-auto min-w-max">
               <!-- Table Headers -->
               <thead>
               <tr>
                   <th class="p-4 border-b border-slate-300 bg-slate-50">
-                  <p class="block text-sm font-normal leading-none text-slate-500">
+                  <p class="block text-sm font-normal leading-none text-body">
                       Item
                   </p>
                   </th>
                   <th class="p-4 border-b border-slate-300 bg-slate-50">
-                  <p class="block text-sm font-normal leading-none text-slate-500">
+                  <p class="block text-sm font-normal leading-none text-body">
                       Quantity
                   </p>
                   </th>
                   <th class="p-4 border-b border-slate-300 bg-slate-50 hidden md:table-cell">
-                  <p class="block text-sm font-normal leading-none text-slate-500">
+                  <p class="block text-sm font-normal leading-none text-body">
                       Rate
                   </p>
                   </th>
                   <th class="p-4 border-b border-slate-300 bg-slate-50">
-                  <p class="block text-sm font-normal leading-none text-slate-500">
+                  <p class="block text-sm font-normal leading-none text-body">
                       Points
                   </p>
                   </th>
@@ -183,12 +198,12 @@
               <!-- Table Footer -->
               <tfoot>
               <tr>
-                  <td colspan="2" class="p-4 text-left font-bold text-slate-800 border-t border-slate-300">
+                  <td colspan="2" class="p-4 text-left font-bold text-header border-t border-slate-300">
                   Phase Total:
                   </td>
                   <td colspan="1" class="p-4 font-bold text-slate-800 border-t border-slate-300 hidden md:table-cell">
                   </td>
-                  <td id="phase-3-total" colspan="1" class="p-4 font-semibold text-slate-800 border-t border-slate-300">
+                  <td id="phase-3-total" colspan="1" class="p-4 font-semibold text-header border-t border-slate-300">
                   0
                   </td>
               </tr>
@@ -202,38 +217,38 @@
   <!-- Accordion Item 4 -->
   <div class="border-b border-slate-200 mx-auto container">
     <button onclick="toggleAccordion(4)" class="w-full flex justify-between items-center py-5 text-slate-800">
-      <span class="text-slate-600 font-medium">Phase 4</span>
-      <span id="icon-4" class="text-slate-800 transition-transform duration-300">
+      <span class="text-header font-[Anta]">Phase 4</span>
+      <span id="icon-4" class="text-header transition-transform duration-300">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
           <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
         </svg>
       </span>
     </button>
     <div id="content-4" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-      <div class="pb-5 text-sm text-slate-500">
+      <div class="pb-5 text-sm text-body">
         <!-- Phase 4 -->
-        <div class="relative flex flex-col w-full h-full overflow-scroll text-gray-700 bg-white shadow-md rounded-lg bg-clip-border ">
+        <div class="relative flex flex-col w-full h-full overflow-scroll text-body bg-white shadow-md rounded-lg bg-clip-border font-[Inter]">
           <table id="productTable" class="w-full text-left table-auto min-w-max">
               <!-- Table Headers -->
               <thead>
               <tr>
                   <th class="p-4 border-b border-slate-300 bg-slate-50">
-                  <p class="block text-sm font-normal leading-none text-slate-500">
+                  <p class="block text-sm font-normal leading-none text-body">
                       Item
                   </p>
                   </th>
                   <th class="p-4 border-b border-slate-300 bg-slate-50">
-                  <p class="block text-sm font-normal leading-none text-slate-500">
+                  <p class="block text-sm font-normal leading-none text-body">
                       Quantity
                   </p>
                   </th>
                   <th class="p-4 border-b border-slate-300 bg-slate-50 hidden md:table-cell">
-                  <p class="block text-sm font-normal leading-none text-slate-500">
+                  <p class="block text-sm font-normal leading-none text-body">
                       Rate
                   </p>
                   </th>
                   <th class="p-4 border-b border-slate-300 bg-slate-50">
-                  <p class="block text-sm font-normal leading-none text-slate-500">
+                  <p class="block text-sm font-normal leading-none text-body">
                       Points
                   </p>
                   </th>
@@ -245,12 +260,12 @@
               <!-- Table Footer -->
               <tfoot>
               <tr>
-                  <td colspan="2" class="p-4 text-left font-bold text-slate-800 border-t border-slate-300">
+                  <td colspan="2" class="p-4 text-left font-bold text-header border-t border-slate-300">
                   Phase Total:
                   </td>
                   <td colspan="1" class="p-4 font-bold text-slate-800 border-t border-slate-300 hidden md:table-cell">
                   </td>
-                  <td id="phase-4-total" colspan="1" class="p-4 font-semibold text-slate-800 border-t border-slate-300">
+                  <td id="phase-4-total" colspan="1" class="p-4 font-semibold text-header border-t border-slate-300">
                   0
                   </td>
               </tr>
@@ -264,38 +279,38 @@
   <!-- Accordion Item 5 -->
   <div class="border-b border-slate-200 mx-auto container">
     <button onclick="toggleAccordion(5)" class="w-full flex justify-between items-center py-5 text-slate-800">
-      <span class="text-slate-600 font-medium">Phase 5</span>
-      <span id="icon-5" class="text-slate-800 transition-transform duration-300">
+      <span class="text-header font-[Anta]">Phase 5</span>
+      <span id="icon-5" class="text-header transition-transform duration-300">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
           <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
         </svg>
       </span>
     </button>
     <div id="content-5" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-      <div class="pb-5 text-sm text-slate-500">
+      <div class="pb-5 text-sm text-body">
         <!-- Phase 5 -->
-        <div class="relative flex flex-col w-full h-full overflow-scroll text-gray-700 bg-white shadow-md rounded-lg bg-clip-border ">
+        <div class="relative flex flex-col w-full h-full overflow-scroll text-body bg-white shadow-md rounded-lg bg-clip-border font-[Inter]">
           <table id="productTable" class="w-full text-left table-auto min-w-max">
               <!-- Table Headers -->
               <thead>
               <tr>
                   <th class="p-4 border-b border-slate-300 bg-slate-50">
-                  <p class="block text-sm font-normal leading-none text-slate-500">
+                  <p class="block text-sm font-normal leading-none text-body">
                       Item
                   </p>
                   </th>
                   <th class="p-4 border-b border-slate-300 bg-slate-50">
-                  <p class="block text-sm font-normal leading-none text-slate-500">
+                  <p class="block text-sm font-normal leading-none text-body">
                       Quantity
                   </p>
                   </th>
                   <th class="p-4 border-b border-slate-300 bg-slate-50 hidden md:table-cell">
-                  <p class="block text-sm font-normal leading-none text-slate-500">
+                  <p class="block text-sm font-normal leading-none text-body">
                       Rate
                   </p>
                   </th>
                   <th class="p-4 border-b border-slate-300 bg-slate-50">
-                  <p class="block text-sm font-normal leading-none text-slate-500">
+                  <p class="block text-sm font-normal leading-none text-body">
                       Points
                   </p>
                   </th>
@@ -307,12 +322,12 @@
               <!-- Table Footer -->
               <tfoot>
               <tr>
-                  <td colspan="2" class="p-4 text-left font-bold text-slate-800 border-t border-slate-300">
+                  <td colspan="2" class="p-4 text-left font-bold text-header border-t border-slate-300">
                   Phase Total:
                   </td>
                   <td colspan="1" class="p-4 font-bold text-slate-800 border-t border-slate-300 hidden md:table-cell">
                   </td>
-                  <td id="phase-5-total" colspan="1" class="p-4 font-semibold text-slate-800 border-t border-slate-300">
+                  <td id="phase-5-total" colspan="1" class="p-4 font-semibold text-header border-t border-slate-300">
                   0
                   </td>
               </tr>
@@ -323,31 +338,31 @@
     </div>
   </div>
 
-  <span class="text-slate-600 font-light text-xs mx-auto">* Has a 100 Million Max</span>
-  <span class="text-slate-600 font-light text-xs mx-auto">** Input allows adding numbers with "+" i.e 1+4+8</span>
+  <span class="text-body font-light text-xs mx-auto font-[Inter]">* Has a 100 Million Max</span>
+  <span class="text-body font-light text-xs mx-auto font-[Inter]">** Input allows adding numbers with "+" i.e 1+4+8</span>
 
  <div class="m-2 sm:m-4 md:m-8">
-  <div class="relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-full mx-auto max-w-xl">
+  <div class="relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-full mx-auto max-w-xl font-[Anta]">
     <div class="p-4">
       <h5 class="mb-2 text-slate-800 text-xl font-semibold">
         Totals:
       </h5>
-      <p class="text-slate-600 leading-normal font-medium">
+      <p class="text-header leading-normal font-medium">
         Phase 1: <span id="phase-1-final-total">0</span> 
       </p>
-      <p class="text-slate-600 leading-normal font-medium">
+      <p class="text-header leading-normal font-medium">
         Phase 2: <span id="phase-2-final-total">0</span> 
       </p>
-      <p class="text-slate-600 leading-normal font-medium">
+      <p class="text-header leading-normal font-medium">
         Phase 3: <span id="phase-3-final-total">0</span> 
       </p>
-      <p class="text-slate-600 leading-normal font-medium">
+      <p class="text-header leading-normal font-medium">
         Phase 4: <span id="phase-4-final-total">0</span> 
       </p>
-      <p class="text-slate-600 leading-normal font-medium">
+      <p class="text-header leading-normal font-medium">
         Phase 5: <span id="phase-5-final-total">0</span>
         <hr>
-      <p class="text-slate-600 leading-normal font-semibold">
+      <p class="text-header leading-normal font-semibold">
         Final Total: <span id="final-total"></span>
       </p>
 
@@ -359,14 +374,14 @@
          <template id="template-row">
           <tr class="hover:bg-slate-50">
               <td class="py-4 px-2 border-b border-slate-200">
-              <p class="block text-sm text-slate-800">
+              <p class="block text-sm text-header">
                   -
               </p>
               </td>
               <td class="px-4 py-2 border-b border-slate-200">
               <span class="block text-sm text-slate-800">
                   <input
-                  class="w-24 bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow sm:w-min"
+                  class="w-24 bg-transparent placeholder:text-slate-400 text-header text-sm border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow sm:w-min"
                   type="text"
                   onkeypress="handleAllowNumbersOnly(event)"
                   onkeyup="addComma(this)"
@@ -374,20 +389,25 @@
               </span>
               </td>
               <td class="p-4 border-b border-slate-200 hidden md:table-cell">
-              <p class="block text-sm text-slate-800">
+              <p class="block text-sm text-header">
                   -
               </p>
               </td>
               <td class="py-4 px-2 border-b border-slate-200">
-              <p class="block text-sm text-slate-800">
+              <p class="block text-sm text-header">
                  0
               </p>
               </td>
           </tr>
       </template>
 
-
       </div>
       </div>
+       <!-- Footer -->
+       <footer>
+        <div class="flex bg-raincloud flex-row h-64 mt-4">
+            <p class="text-sm text-peaches mt-56 mx-auto">&#169; 2025 DSL Calculator</p>
+        </div>
+    </footer>
     </body>
 </html>

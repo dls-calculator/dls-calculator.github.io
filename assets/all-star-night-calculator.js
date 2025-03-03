@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     if(limitReached){
       input.style.color = "#DC2626";
     } else {
-      input.style.color = "#004155";
+      input.style.color = "#302722";
     }
   }
 
