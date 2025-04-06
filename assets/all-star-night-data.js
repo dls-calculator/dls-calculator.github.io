@@ -672,8 +672,8 @@ const data = {
           "special": "multiple-input",
         },
         {
-          "name": "Parts: Premium**",
-          "rate": "6,750 Each",
+          "name": "Parts: Premium",
+          "rate": "6,750 Each**",
           "formula": function(q, id){return cal(q*6750, this, id)},
           "points": 0,
           "special": "multiple-input",
